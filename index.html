@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+ <h1 id="title">Formulário de pesquisa</h1>
+<p id="description">formulário para saber mais sobre você.</p>
+  <form id="survey-form">
+    <div class="input-element">
+    <label id="name-label">
+      Nome
+  <input placeholder="name "id="name" type="text" required/>
+      </div>
+    </label>
+    <div class="input-element">
+    <label id="email-label">
+      Email
+  <input placeholder="email" id="email" type="email" required/>
+      </div>
+    </label>
+    <div class="input-element">
+    <label id="number-label">
+      Idade
+  <input placeholder="number" id="number" min="1" max="100" type="number" required/>
+      </div>
+    </label>
+    <div class="input-element">
+    <label id="select-label">
+      Em qual região do Brasil você mora?
+  <select id="dropdown">
+    <option>Norte</option>
+    <option>Nordeste</option>
+    <option>Centro-Oeste</option>
+    <option>Sudeste</option>
+    <option>Sul</option>
+  </select>
+    </div>
+    </label>
+    <div>
+  <label>Você gosta de onde mora?</label>
+  <label><input type="radio" name="gosto" value="sim"/>Sim</label>
+  <label><input type="radio" name="gosto" value="não"/>Não</label>
+    </div>
+  <div>
+   <label>Qual dessas coisas você gosta de fazer?</label>
+   <label><input type="checkbox" name="hobby" value="games"/>Jogar vídeo game</label>
+   <label><input type="checkbox" name="hobby" value="correr"/>Correr</label>
+   <label><input type="checkbox" name="hobby" value="cozinhar"/>Cozinhar</label>
+    </div>
+  <div>
+    <label>Comentários adicionais</label>
+    <textarea type="text"></textarea>
+  </div>
+    <button type="submit" id="submit">Submit</button>
+    
+  </form>
+   
+</body>
+
+</html>
