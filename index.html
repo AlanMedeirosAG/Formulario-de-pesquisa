@@ -1,66 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pesquisa</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel = "stylesheet" href = "styles2.css">
 </head>
 
-<body>
- <h1 id="title">Formulário de pesquisa</h1>
-<p id="description">formulário para saber mais sobre você.</p>
-  <form id="survey-form">
-    <div class="input-element">
-    <label id="name-label">
-      Nome
-  <input placeholder="name "id="name" type="text" required/>
-      </div>
-    </label>
-    <div class="input-element">
-    <label id="email-label">
-      Email
-  <input placeholder="email" id="email" type="email" required/>
-      </div>
-    </label>
-    <div class="input-element">
-    <label id="number-label">
-      Idade
-  <input placeholder="number" id="number" min="1" max="100" type="number" required/>
-      </div>
-    </label>
-    <div class="input-element">
-    <label id="select-label">
-      Em qual região do Brasil você mora atualmente?
-  <select id="dropdown">
-    <option>Norte</option>
-    <option>Nordeste</option>
-    <option>Centro-Oeste</option>
-    <option>Sudeste</option>
-    <option>Sul</option>
-  </select>
-    </div>
-    </label>
-    <div>
-  <label>Você gosta do local onde mora?</label>
-  <label><input type="radio" name="gosto" value="sim"/>Sim</label>
-  <label><input type="radio" name="gosto" value="não"/>Não</label>
-    </div>
-  <div>
-   <label>Qual dessas coisas você gosta de fazer?</label>
-   <label><input type="checkbox" name="hobby" value="games"/>Jogar vídeo games</label>
-   <label><input type="checkbox" name="hobby" value="correr"/>Correr</label>
-   <label><input type="checkbox" name="hobby" value="cozinhar"/>Cozinhar</label>
-    </div>
-  <div>
-    <label>Comentários adicionais</label>
-    <textarea type="text"></textarea>
-  </div>
-    <button type="submit" id="submit">Submit</button>
-    
-  </form>
-   
+<body class="bg-light">
+<div class="container mt-5">
+    <h1 id="title" class="text-center">Formulário de Pesquisa</h1>
+    <p id="description" class="text-center">Formulário para saber mais sobre você.</p>
+
+    <form id="survey-form" class="p-4 border rounded bg-white shadow">
+        <div class="form-group">
+            <label for="name" id="name-label">Nome</label>
+            <input placeholder="Digite seu nome" id="name" type="text" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input placeholder="Digite seu email" id="email" type="email" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="number" id="number-label">Idade</label>
+            <input placeholder="Digite sua idade" id="number" min="1" max="100" type="number" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="dropdown" id="select-label">Em qual região do Brasil você mora atualmente?</label>
+            <select id="dropdown" class="form-control">
+                <option>Norte</option>
+                <option>Nordeste</option>
+                <option>Centro-Oeste</option>
+                <option>Sudeste</option>
+                <option>Sul</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Você gosta do local onde mora?</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gosto" id="gosto-sim" value="sim" required>
+                <label class="form-check-label" for="gosto-sim">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gosto" id="gosto-nao" value="não">
+                <label class="form-check-label" for="gosto-nao">Não</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Qual dessas coisas você gosta de fazer?</label><br>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="hobby" id="hobby-games" value="games">
+                <label class="form-check-label" for="hobby-games">Jogar vídeo games</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="hobby" id="hobby-correr" value="correr">
+                <label class="form-check-label" for="hobby-correr">Correr</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="hobby" id="hobby-cozinhar" value="cozinhar">
+                <label class="form-check-label" for="hobby-cozinhar">Cozinhar</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comentários adicionais</label>
+            <textarea id="comments" class="form-control" rows="4"></textarea>
+        </div>
+
+        <button type="submit" id="submit" class="btn btn-primary btn-block">Enviar</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
